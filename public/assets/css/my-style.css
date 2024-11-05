@@ -1,0 +1,8 @@
+#main .page-heading {
+    min-height: 70vh;
+}
+
+.thumb-img {
+    max-width: 100px;
+    max-height: 100px;
+}
