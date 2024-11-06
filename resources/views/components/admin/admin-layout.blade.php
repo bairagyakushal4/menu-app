@@ -22,15 +22,17 @@
     <div id="app">
         {{$sidebar}}
 
-        <div id="main">
+        <div id="main" class="layout-navbar">
             <x-admin.admin-header></x-admin.admin-header>
 
-            <div class="page-heading">
-                {{$pageTitle}}
+            <div id="main-content">
+                <div class="page-heading">
+                    {{$pageTitle}}
 
-                <section class="section">
-                    {{$main}}
-                </section>
+                    <section class="section">
+                        {{$main}}
+                    </section>
+                </div>
             </div>
 
             <x-admin.admin-footer></x-admin.admin-footer>
