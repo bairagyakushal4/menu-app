@@ -52,6 +52,13 @@
                     </a>
                 </li>
 
+                <li class="sidebar-item @if($activeModule=='profile') active @endif">
+                    <a href="/admin/profile" class='sidebar-link'>
+                        <i class="bi bi-person-lines-fill"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+
                 <li class="sidebar-item has-sub @if($activeModule=='category') active @endif">
                     <a href="javascript:void(0)" class='sidebar-link'>
                         <i class="bi bi-stack"></i>
