@@ -4,7 +4,7 @@
         <p class="auth-subtitle mb-5">Input your email and we will send you reset password link.</p>
 
         @if (session('status'))
-        <p class="text-sm text-success d-block">{{ session('status') }}</p>
+        <p class="text-sm text-success">{{ session('status') }}</p>
         @endif
 
         <form action="/admin/forgot-password" method="POST">

@@ -4,7 +4,7 @@
         <p class="auth-subtitle mb-5">Log in with your data that you entered during registration.</p>
 
         @if (session('status'))
-        <p class="text-sm text-success d-block">{{ session('status') }}</p>
+        <p class="text-sm text-success">{{ session('status') }}</p>
         @endif
 
         <form method="POST" action="/admin/login">
