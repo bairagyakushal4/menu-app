@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
+use Illuminate\Support\Facades\Mail;
 
 require_once __DIR__ . '/auth.php';
 
@@ -78,4 +79,12 @@ Route::middleware('auth')->group(function () {
 
         Route::get('report', fn() => view('admin.report.report'));
     });
+});
+
+
+Route::get('/admin/send-test-email', function () {
+    Mail::raw('This is a test email using Google SMTP.', function ($message) {
+        $message->to('bairagyakushal4@gmail.com')->subject('Test Email');
+    });
+    return 'Test email sent!';
 });
