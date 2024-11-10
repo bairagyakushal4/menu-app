@@ -1,13 +1,14 @@
-<x-admin.admin-layout title="Profile">
+<x-admin-layout title="Profile">
     <x-slot name="sidebar">
-        <x-admin.admin-sidebar activeModule="profile" activePage="profile"></x-admin.admin-sidebar>
+        <x-admin-sidebar activeModule="profile" activePage="profile">
+        </x-admin-sidebar>
     </x-slot>
 
     <x-slot name="pageTitle">
-        <x-admin.admin-page-title title="Profile" subtitle="View Profile">
+        <x-admin-page-title title="Profile" subtitle="View Profile">
             <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
             <li class="breadcrumb-item active" aria-current="page">Profile</li>
-        </x-admin.admin-page-title>
+        </x-admin-page-title>
     </x-slot>
 
     <x-slot name="main">
@@ -277,4 +278,4 @@
 
     </x-slot>
 
-</x-admin.admin-layout>
+</x-admin-layout>

@@ -1,4 +1,4 @@
-<x-admin.auth.auth-layout title="Register">
+<x-admin-auth-layout title="Register">
     <x-slot name="main">
         <h1 class="auth-title">Sign Up.</h1>
         <p class="auth-subtitle mb-5">Input your data to register to Menu App.</p>
@@ -57,4 +57,4 @@
             </p>
         </div>
     </x-slot>
-</x-admin.auth.auth-layout>
+</x-admin-auth-layout>

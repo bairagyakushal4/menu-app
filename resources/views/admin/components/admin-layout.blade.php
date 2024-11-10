@@ -23,7 +23,7 @@
         {{$sidebar}}
 
         <div id="main" class="layout-navbar">
-            <x-admin.admin-header></x-admin.admin-header>
+            <x-admin-header></x-admin-header>
 
             <div id="main-content">
                 <div class="page-heading">
@@ -35,7 +35,7 @@
                 </div>
             </div>
 
-            <x-admin.admin-footer></x-admin.admin-footer>
+            <x-admin-footer></x-admin-footer>
         </div>
     </div>
 

@@ -1,4 +1,4 @@
-<x-admin.auth.auth-layout title="Verify Email">
+<x-admin-auth-layout title="Verify Email">
     <x-slot name="main">
         <h1 class="auth-title">Verification.</h1>
 
@@ -36,4 +36,4 @@
 
         </div>
     </x-slot>
-</x-admin.auth.auth-layout>
+</x-admin-auth-layout>

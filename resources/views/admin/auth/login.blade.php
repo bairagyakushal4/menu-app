@@ -1,4 +1,4 @@
-<x-admin.auth.auth-layout title="Login">
+<x-admin-auth-layout title="Login">
     <x-slot name="main">
         <h1 class="auth-title">Log in.</h1>
         <p class="auth-subtitle mb-5">Log in with your data that you entered during registration.</p>
@@ -46,4 +46,4 @@
             <p><a class="font-bold" href="/admin/forgot-password">Forgot password?</a></p>
         </div>
     </x-slot>
-</x-admin.auth.auth-layout>
+</x-admin-auth-layout>

@@ -22,6 +22,6 @@ class AuthLayout extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.admin.auth.auth-layout');
+        return view('components.auth.auth-layout');
     }
 }

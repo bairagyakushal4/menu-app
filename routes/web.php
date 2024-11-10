@@ -22,7 +22,7 @@ Route::get('/', function () {
 // admin
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
-    Route::get('/', fn() => view('admin.index'))->name('dashboard');
+    Route::get('/', fn() => view('admin.app-admin'));
 
     Route::get('/profile', [ProfileController::class, 'edit']);
     Route::patch('/profile', [ProfileController::class, 'update']);

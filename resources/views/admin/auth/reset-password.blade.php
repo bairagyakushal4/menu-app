@@ -1,4 +1,4 @@
-<x-admin.auth.auth-layout title="Reset Password">
+<x-admin-auth-layout title="Reset Password">
     <x-slot name="main">
         <h1 class="auth-title">Reset Password.</h1>
         <p class="auth-subtitle mb-5">Enter the new password to update the records.</p>
@@ -50,4 +50,4 @@
         </form>
 
     </x-slot>
-</x-admin.auth.auth-layout>
+</x-admin-auth-layout>
