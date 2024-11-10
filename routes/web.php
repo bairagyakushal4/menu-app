@@ -16,11 +16,10 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'admin'], function () {
     require_once __DIR__ . '/admin-auth.php';
-});
 
-
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
-    require_once __DIR__ . '/admin.php';
+    Route::middleware('auth')->group(function () {
+        require_once __DIR__ . '/admin.php';
+    });
 });
 
 // =================admin====================
