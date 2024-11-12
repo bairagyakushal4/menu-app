@@ -22,7 +22,7 @@
             <div class="col-lg-5 col-12">
                 <div id="auth-left">
                     <div class="auth-logo">
-                        <a href="index.html"><img src="{{ asset('assets/img/logo.png') }}" alt="Logo"></a>
+                        <a href="/admin"><img src="{{ asset('assets/img/logo.png') }}" alt="Logo"></a>
                     </div>
                     {{$main}}
                 </div>
