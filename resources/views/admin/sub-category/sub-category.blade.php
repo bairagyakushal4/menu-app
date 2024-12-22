@@ -49,8 +49,8 @@
                                         {{-- <label class="form-check-label" for="category_status">Active</label> --}}
                                     </div>
                                 </td>
-                                <td>{{ $row->created_at->format('M d, Y h:i A') }}</td>
-                                <td>{{ $row->updated_at->format('M d, Y h:i A') }}</td>
+                                <td>@if($row->created_at) {{ $row->created_at->format('M d, Y h:i A')}} @endif</td>
+                                <td>@if($row->updated_at) {{ $row->updated_at->format('M d, Y h:i A')}} @endif</td>
                                 <td>
                                     <a href="/admin/sub-category-update/{{ $row->category_id }}"
                                         class="btn icon btn-primary me-2 mb-2"><i class="bi bi-pencil"></i></a>

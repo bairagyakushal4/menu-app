@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\admin\ProfileController;
+use App\Http\Controllers\ProfileController;
 
 use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\ProductController;
@@ -9,11 +9,10 @@ use App\Http\Controllers\admin\ProductController;
 
 
 Route::get('/', fn() => redirect('/admin/dashboard'));
-Route::get('dashboard', fn() => view('admin.app-admin'))->name('admin.dashboard');
+Route::get('dashboard', fn() => view('admin.dashboard'))->name('admin.dashboard');
 
-Route::get('profile', [ProfileController::class, 'edit']);
+Route::get('profile', [ProfileController::class, 'edit'])->name('admin.profile');
 Route::patch('profile', [ProfileController::class, 'update']);
-Route::delete('profile', [ProfileController::class, 'destroy']);
 
 Route::middleware('verified')->group(function () {
     Route::get('main-category-create', fn() => view('admin.main-category.main-category-create'));

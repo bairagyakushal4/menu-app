@@ -64,8 +64,8 @@
                                 </td>
                                 <td>{{ $row->category_id }}</td>
                                 <td>{{ $row->product_description }}</td>
-                                <td>{{ $row->created_at->format('M d, Y h:i A') }}</td>
-                                <td>{{ $row->updated_at->format('M d, Y h:i A') }}</td>
+                                <td>@if($row->created_at) {{ $row->created_at->format('M d, Y h:i A')}} @endif</td>
+                                <td>@if($row->updated_at) {{ $row->updated_at->format('M d, Y h:i A')}} @endif</td>
                                 <td>
                                     <a href="/admin/product-update/{{ $row->product_id }}"
                                         class="btn icon btn-primary mb-2 me-2"><i class="bi bi-pencil"></i></a>
