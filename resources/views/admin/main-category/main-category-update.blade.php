@@ -1,14 +1,15 @@
-<x-admin.admin-layout title="Main Category">
+<x-admin-layout title="Main Category">
     <x-slot name="sidebar">
-        <x-admin.admin-sidebar activeModule="category" activePage="main-category"></x-admin.admin-sidebar>
+        <x-admin-sidebar activeModule="category" activePage="main-category">
+        </x-admin-sidebar>
     </x-slot>
 
     <x-slot name="pageTitle">
-        <x-admin.admin-page-title title="Main Category" subtitle="Update Main Category">
+        <x-admin-page-title title="Main Category" subtitle="Update Main Category">
             <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
             <li class="breadcrumb-item"><a href="/admin/main-category">Main Category</a></li>
             <li class="breadcrumb-item active" aria-current="page">Update Category</li>
-        </x-admin.admin-page-title>
+        </x-admin-page-title>
     </x-slot>
 
     <x-slot name="main">
@@ -75,4 +76,4 @@
         </div>
     </x-slot>
 
-</x-admin.admin-layout>
+</x-admin-layout>

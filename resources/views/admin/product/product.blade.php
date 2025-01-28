@@ -1,13 +1,14 @@
-<x-admin.admin-layout title="Product">
+<x-admin-layout title="Product">
     <x-slot name="sidebar">
-        <x-admin.admin-sidebar activeModule="product" activePage="product"></x-admin.admin-sidebar>
+        <x-admin-sidebar activeModule="product" activePage="product">
+        </x-admin-sidebar>
     </x-slot>
 
     <x-slot name="pageTitle">
-        <x-admin.admin-page-title title="Product" subtitle="View Products">
+        <x-admin-page-title title="Product" subtitle="View Products">
             <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
             <li class="breadcrumb-item active" aria-current="page">Product</li>
-        </x-admin.admin-page-title>
+        </x-admin-page-title>
     </x-slot>
 
     <x-slot name="main">
@@ -15,8 +16,8 @@
 
             <div class="card-body">
                 <div class="mb-3 text-end">
-                    <a href="/admin/product-sample.csv" class="mb-2">Sample CSV</a>
-                    <a href="/admin/product-import" class="btn btn-primary ms-2 mb-2">Imort Product with CSV</a>
+                    <a href="/admin/product-sample-download" class="mb-2">Sample CSV</a>
+                    <a href="/admin/product-import" class="btn btn-primary ms-2 mb-2">Import Product with CSV</a>
                     <a href="/admin/product-imgs-bulk-upload" class="btn btn-primary ms-2 mb-2">Bulk Product Images
                         Upload</a>
                     <a href="/admin/product-create" class="btn btn-primary ms-2 mb-2">Create Product</a>
@@ -63,8 +64,8 @@
                                 </td>
                                 <td>{{ $row->category_id }}</td>
                                 <td>{{ $row->product_description }}</td>
-                                <td>{{ $row->created_at->format('M d, Y h:i A') }}</td>
-                                <td>{{ $row->updated_at->format('M d, Y h:i A') }}</td>
+                                <td>@if($row->created_at) {{ $row->created_at->format('M d, Y h:i A')}} @endif</td>
+                                <td>@if($row->updated_at) {{ $row->updated_at->format('M d, Y h:i A')}} @endif</td>
                                 <td>
                                     <a href="/admin/product-update/{{ $row->product_id }}"
                                         class="btn icon btn-primary mb-2 me-2"><i class="bi bi-pencil"></i></a>
@@ -133,4 +134,4 @@
         </script>
     </x-slot>
 
-</x-admin.admin-layout>
+</x-admin-layout>

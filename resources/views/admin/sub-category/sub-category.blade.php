@@ -1,13 +1,14 @@
-<x-admin.admin-layout title="Sub Category">
+<x-admin-layout title="Sub Category">
     <x-slot name="sidebar">
-        <x-admin.admin-sidebar activeModule="category" activePage="sub-category"></x-admin.admin-sidebar>
+        <x-admin-sidebar activeModule="category" activePage="sub-category">
+        </x-admin-sidebar>
     </x-slot>
 
     <x-slot name="pageTitle">
-        <x-admin.admin-page-title title="Sub Category" subtitle="View Sub Categories">
+        <x-admin-page-title title="Sub Category" subtitle="View Sub Categories">
             <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
             <li class="breadcrumb-item active" aria-current="page">Sub Category</li>
-        </x-admin.admin-page-title>
+        </x-admin-page-title>
     </x-slot>
 
     <x-slot name="main">
@@ -48,8 +49,8 @@
                                         {{-- <label class="form-check-label" for="category_status">Active</label> --}}
                                     </div>
                                 </td>
-                                <td>{{ $row->created_at->format('M d, Y h:i A') }}</td>
-                                <td>{{ $row->updated_at->format('M d, Y h:i A') }}</td>
+                                <td>@if($row->created_at) {{ $row->created_at->format('M d, Y h:i A')}} @endif</td>
+                                <td>@if($row->updated_at) {{ $row->updated_at->format('M d, Y h:i A')}} @endif</td>
                                 <td>
                                     <a href="/admin/sub-category-update/{{ $row->category_id }}"
                                         class="btn icon btn-primary me-2 mb-2"><i class="bi bi-pencil"></i></a>
@@ -117,4 +118,4 @@
         </script>
     </x-slot>
 
-</x-admin.admin-layout>
+</x-admin-layout>

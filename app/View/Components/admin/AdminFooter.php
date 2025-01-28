@@ -21,6 +21,6 @@ class AdminFooter extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.admin.admin-footer');
+        return view('components.admin-footer');
     }
 }

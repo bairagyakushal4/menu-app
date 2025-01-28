@@ -21,6 +21,6 @@ class AdminHeader extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.admin.admin-header');
+        return view('components.admin-header');
     }
 }

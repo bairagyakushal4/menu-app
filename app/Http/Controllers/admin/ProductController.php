@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\admin;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use Illuminate\Support\Facades\Storage;
@@ -206,5 +207,11 @@ class ProductController extends Controller
             $uploadedFiles[] = $product_image_path;
         }
         return $uploadedFiles;
+    }
+
+    public function productSampleDownload()
+    {
+        $file = public_path('storage/download/sample-product.csv');
+        return response()->download($file);
     }
 }

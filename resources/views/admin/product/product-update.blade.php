@@ -1,14 +1,15 @@
-<x-admin.admin-layout title="Product">
+<x-admin-layout title="Product">
     <x-slot name="sidebar">
-        <x-admin.admin-sidebar activeModule="product" activePage="product"></x-admin.admin-sidebar>
+        <x-admin-sidebar activeModule="product" activePage="product">
+        </x-admin-sidebar>
     </x-slot>
 
     <x-slot name="pageTitle">
-        <x-admin.admin-page-title title="Product" subtitle="Update Product">
+        <x-admin-page-title title="Product" subtitle="Update Product">
             <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
             <li class="breadcrumb-item"><a href="/admin/product">Product</a></li>
             <li class="breadcrumb-item active" aria-current="page">Update Product</li>
-        </x-admin.admin-page-title>
+        </x-admin-page-title>
     </x-slot>
 
     <x-slot name="main">
@@ -137,4 +138,4 @@
     </x-slot>
 
 
-</x-admin.admin-layout>
+</x-admin-layout>

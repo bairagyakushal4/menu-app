@@ -23,6 +23,6 @@ class AdminPageTitle extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.admin.admin-page-title');
+        return view('components.admin-page-title');
     }
 }
