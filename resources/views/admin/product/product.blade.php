@@ -16,8 +16,8 @@
 
             <div class="card-body">
                 <div class="mb-3 text-end">
-                    <a href="/admin/product-sample.csv" class="mb-2">Sample CSV</a>
-                    <a href="/admin/product-import" class="btn btn-primary ms-2 mb-2">Imort Product with CSV</a>
+                    <a href="/admin/product-sample-download" class="mb-2">Sample CSV</a>
+                    <a href="/admin/product-import" class="btn btn-primary ms-2 mb-2">Import Product with CSV</a>
                     <a href="/admin/product-imgs-bulk-upload" class="btn btn-primary ms-2 mb-2">Bulk Product Images
                         Upload</a>
                     <a href="/admin/product-create" class="btn btn-primary ms-2 mb-2">Create Product</a>

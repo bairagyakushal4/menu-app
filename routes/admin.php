@@ -1,18 +1,17 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProfileController;
 
+use App\Http\Controllers\admin\AdminProfileController;
 use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\ProductController;
-// use Illuminate\Support\Facades\Mail;
 
 
 Route::get('/', fn() => redirect('/admin/dashboard'));
 Route::get('dashboard', fn() => view('admin.dashboard'))->name('admin.dashboard');
 
-Route::get('profile', [ProfileController::class, 'edit'])->name('admin.profile');
-Route::patch('profile', [ProfileController::class, 'update']);
+Route::get('profile', [AdminProfileController::class, 'edit'])->name('admin.profile');
+Route::patch('profile', [AdminProfileController::class, 'update']);
 
 Route::middleware('verified')->group(function () {
     Route::get('main-category-create', fn() => view('admin.main-category.main-category-create'));
@@ -48,6 +47,7 @@ Route::middleware('verified')->group(function () {
 
     Route::get('product-imgs-bulk-upload', fn() => view('admin.product.product-imgs-bulk-upload'));
     Route::get('product-import', fn() => view('admin.product.product-import'));
+    Route::get('product-sample-download', [ProductController::class, 'productSampleDownload']);
 
     Route::get('report', fn() => view('admin.report.report'));
 });

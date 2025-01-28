@@ -208,4 +208,10 @@ class ProductController extends Controller
         }
         return $uploadedFiles;
     }
+
+    public function productSampleDownload()
+    {
+        $file = public_path('storage/download/sample-product.csv');
+        return response()->download($file);
+    }
 }

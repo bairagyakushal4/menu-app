@@ -14,12 +14,6 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
         // $middleware->append(\App\Http\Middleware\CheckUserType::class);
 
-
-        // $middleware->redirectGuestsTo(function () {
-        //     return route('admin.login');
-        // });
-
-
         $middleware->alias([
             'RedirectAdminAuth' => \App\Http\Middleware\RedirectAdminAuth::class,
             'AdminCheckMiddleware' => \App\Http\Middleware\AdminCheckMiddleware::class,
